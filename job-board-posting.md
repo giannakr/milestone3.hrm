@@ -8,7 +8,7 @@ Ready for Handshake, LinkedIn, Silicon Slopes, and campus boards. Matches the ca
 
 **Company:** Prova
 
-**Location:** On-site · Lehi, UT (relocation required; no relocation assistance)
+**Location:** On-site · Lehi, UT
 
 **Type:** Full-time · Sales & Growth · Reports to Founder/CEO
 
