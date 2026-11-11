@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>milestone3.hrm — Recruiting CRM (HubSpot)</title>
+  <meta name="description" content="Prova recruiting CRM view powered by HubSpot. Connection check, account link instructions, and SDR hiring pipeline." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="gate" class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__panel">
+      <img class="gate__logo" src="prova-logo.png?v=5" alt="Prova" />
+      <p class="gate__host">milestone3.hrm</p>
+      <p class="gate__eyebrow">Careers preview</p>
+      <h1 id="gate-title" class="gate__title">Enter to view recruiting CRM</h1>
+      <p class="gate__copy">Shared access for the consulting team and client review. Password is in the project README.</p>
+      <form id="gate-form" class="gate__form" novalidate>
+        <label class="sr-only" for="gate-password">Password</label>
+        <input
+          id="gate-password"
+          class="gate__input"
+          type="password"
+          name="password"
+          autocomplete="current-password"
+          placeholder="Shared password"
+          required
+        />
+        <button type="submit" class="gate__submit">Unlock site</button>
+        <p id="gate-error" class="gate__error" hidden>That password doesn’t match. Check the README and try again.</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="site" class="site" hidden>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand brand--nav" href="index.html" aria-label="milestone3.hrm home">
+          <img class="brand__logo" src="prova-logo.png?v=5" alt="Prova" />
+          <span class="brand__host">milestone3.hrm</span>
+        </a>
+        <nav class="topbar__nav" aria-label="Primary">
+          <a href="index.html#why">Why Prova</a>
+          <a href="index.html#role">The role</a>
+          <a href="index.html#reality">Real talk</a>
+          <a href="index.html#process">Hiring</a>
+          <a href="crm.html" aria-current="page">Recruiting CRM</a>
+          <a class="topbar__ext" href="https://prova.education" target="_blank" rel="noopener noreferrer">prova.education</a>
+        </nav>
+        <a class="btn btn--ghost btn--sm" href="index.html#apply">Apply</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero hero--crm">
+        <div class="hero__atmosphere" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <p class="hero__loc">HubSpot · Recruiting</p>
+          <h1 class="hero__headline">Recruiting CRM</h1>
+          <p class="hero__support">
+            Connection status for Prova’s HubSpot account, plus SDR hiring candidates and pipeline stages.
+            Secrets stay on the server — never in the browser.
+          </p>
+          <p class="hero__meta">
+            <span id="hs-mode-badge" class="hs-badge hs-badge--mock" hidden>Sample data</span>
+            milestone3.hrm · Prova careers
+          </p>
+        </div>
+      </section>
+
+      <section id="connect" class="section section--connect">
+        <div class="section__inner">
+          <p class="eyebrow">Connect HubSpot</p>
+          <h2 class="section__title">Link Prova’s HubSpot private app</h2>
+          <p class="section__lede">
+            Create a HubSpot private app with CRM read scopes, then add the access token as
+            <code>HUBSPOT_ACCESS_TOKEN</code> in Cursor Secrets for the published app.
+            Do not paste the token into chat, commit it, or put it in client JavaScript.
+          </p>
+
+          <div class="hs-connect">
+            <div class="hs-connect__status">
+              <h3 class="hs-connect__heading">Connection check</h3>
+              <div id="hs-status" class="hs-status" aria-live="polite">
+                <p class="hs-status__line">Checking…</p>
+              </div>
+              <dl id="hs-account" class="hs-status__meta hs-status__meta--account"></dl>
+              <button type="button" class="btn btn--ghost btn--sm" id="hs-refresh">Refresh status</button>
+            </div>
+
+            <ol class="hs-steps">
+              <li>
+                <h3>Create a HubSpot private app</h3>
+                <p>
+                  In HubSpot: Settings → Integrations → Private Apps → Create.
+                  Enable read scopes for <strong>crm.objects.contacts</strong> and
+                  <strong>crm.objects.deals</strong> (and account info if available).
+                </p>
+              </li>
+              <li>
+                <h3>Copy the access token once</h3>
+                <p>
+                  Store it only in Cursor Secrets / the dashboard — never in this repo,
+                  <code>.env</code> committed to git, or a Slack/chat message.
+                </p>
+              </li>
+              <li>
+                <h3>Bind the secret on the Cursor-hosted app</h3>
+                <p>
+                  Open Cursor → Cloud Agents → Secrets (or the publish dialog’s secrets list).
+                  Set <code>HUBSPOT_ACCESS_TOKEN</code> for the <strong>prova-careers</strong> app,
+                  then republish if prompted. GitHub Pages stays on sample data (no server secrets).
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline" class="section section--pipeline">
+        <div class="section__inner">
+          <p class="eyebrow">SDR hiring</p>
+          <h2 class="section__title">Candidates &amp; pipeline</h2>
+          <p class="section__lede">
+            Contacts tagged for SDR hiring (or recent contacts when no tag matches), with deal/pipeline stage and notes when HubSpot provides them.
+          </p>
+          <p id="hs-note" class="hs-banner" hidden></p>
+
+          <div class="hs-columns">
+            <div>
+              <h3 class="hs-columns__title">Candidates</h3>
+              <div id="hs-contacts" class="hs-list" aria-live="polite">
+                <p class="hs-empty">Loading…</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="hs-columns__title">Pipeline</h3>
+              <div id="hs-deals" class="hs-list" aria-live="polite">
+                <p class="hs-empty">Loading…</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo brand__logo--footer" src="prova-logo.png?v=5" alt="Prova" />
+          <span class="brand__host">milestone3.hrm</span>
+        </div>
+        <p class="footer__links">
+          <a href="index.html">Careers home</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://prova.education" target="_blank" rel="noopener noreferrer">prova.education</a>
+          <span aria-hidden="true">·</span>
+          <span>Lehi, UT</span>
+        </p>
+        <p class="footer__note">milestone3.hrm · HubSpot recruiting CRM (server-side token)</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="gate.js"></script>
+  <script src="hubspot-ui.js"></script>
+</body>
+</html>
