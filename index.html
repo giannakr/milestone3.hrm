@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>milestone3.hrm — Sales Development Representative</title>
+  <meta name="description" content="Join Prova as an SDR in Lehi, UT. Learn sales from the founder while helping professors teach better. milestone3.hrm" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Password gate -->
+  <div id="gate" class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__panel">
+      <img class="gate__logo" src="prova-logo.png?v=5" alt="Prova" />
+      <p class="gate__host">milestone3.hrm</p>
+      <p class="gate__eyebrow">Careers preview</p>
+      <h1 id="gate-title" class="gate__title">Enter to view the SDR role</h1>
+      <p class="gate__copy">Shared access for the consulting team and client review. Password is in the project README.</p>
+      <form id="gate-form" class="gate__form" novalidate>
+        <label class="sr-only" for="gate-password">Password</label>
+        <input
+          id="gate-password"
+          class="gate__input"
+          type="password"
+          name="password"
+          autocomplete="current-password"
+          placeholder="Shared password"
+          required
+        />
+        <button type="submit" class="gate__submit">Unlock site</button>
+        <p id="gate-error" class="gate__error" hidden>That password doesn’t match. Check the README and try again.</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="site" class="site" hidden>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand brand--nav" href="#top" aria-label="milestone3.hrm home">
+          <img class="brand__logo" src="prova-logo.png?v=5" alt="Prova" />
+          <span class="brand__host">milestone3.hrm</span>
+        </a>
+        <nav class="topbar__nav" aria-label="Primary">
+          <a href="#why">Why Prova</a>
+          <a href="#role">The role</a>
+          <a href="#reality">Real talk</a>
+          <a href="#process">Hiring</a>
+          <a class="topbar__ext" href="https://prova.education" target="_blank" rel="noopener noreferrer">prova.education</a>
+        </nav>
+        <a class="btn btn--ghost btn--sm" href="#apply">Apply</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero: one composition — relocation, headline, support, CTA (logo lives in nav) -->
+      <section id="top" class="hero">
+        <div class="hero__atmosphere" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <p class="hero__loc">On-site · Lehi, Utah · No relocation assistance</p>
+          <h1 class="hero__headline">Learn sales from the founder.<br />Help professors teach better.</h1>
+          <p class="hero__support">
+            We’re hiring one Sales Development Representative for a founder-led edtech startup—
+            real mentorship, real company impact, and an honest look at the work before you apply.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#apply">Apply</a>
+            <a class="btn btn--text" href="#reality">See the realistic preview</a>
+          </div>
+          <p class="hero__meta">Sales &amp; Growth · Reports to Founder/CEO · Full-time · Base $50–60K + commission</p>
+        </div>
+      </section>
+
+      <!-- EVP -->
+      <section id="why" class="section section--evp">
+        <div class="section__inner">
+          <p class="eyebrow">Why Prova</p>
+          <h2 class="section__title">Three reasons this role is different</h2>
+          <p class="section__lede">
+            We won’t win a salary war against bigger Lehi tech firms. We will offer something harder to buy:
+            access, ownership, and a mission you can feel in the work.
+          </p>
+          <ol class="pillars">
+            <li class="pillar">
+              <span class="pillar__num">01</span>
+              <h3 class="pillar__title">Founder mentorship</h3>
+              <p class="pillar__copy">
+                Weekly 1:1 call reviews with Kaden—not a manager three levels up. You learn sales by doing it next to the founder.
+              </p>
+            </li>
+            <li class="pillar">
+              <span class="pillar__num">02</span>
+              <h3 class="pillar__title">Real company impact</h3>
+              <p class="pillar__copy">
+                At this stage, every client you bring in matters. Your pipeline doesn’t disappear into a mega org—it shapes Prova.
+              </p>
+            </li>
+            <li class="pillar">
+              <span class="pillar__num">03</span>
+              <h3 class="pillar__title">Education mission</h3>
+              <p class="pillar__copy">
+                Help university professors and departments improve teaching and assessment. Sell something that makes classrooms better.
+              </p>
+            </li>
+          </ol>
+          <div class="audience">
+            <p class="audience__label">Who this fits</p>
+            <ul class="audience__list">
+              <li><strong>New grads:</strong> Your first sales job, with real mentorship and a fast path to more responsibility.</li>
+              <li><strong>Former educators:</strong> Use what you know about teaching to help other educators.</li>
+              <li><strong>Experienced reps:</strong> More ownership, direct founder access, and a bigger impact than at a big company.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Role -->
+      <section id="role" class="section section--role">
+        <div class="section__inner">
+          <p class="eyebrow">The role</p>
+          <h2 class="section__title">Sales Development Representative</h2>
+          <p class="section__lede">
+            Prospect and qualify faculty, book and run demos, close early contracts, and stay close to new clients—
+            coached weekly by the founder in a small, high-collaboration team.
+          </p>
+
+          <div class="role-grid">
+            <div class="role-block">
+              <h3 class="role-block__title">How you’ll spend your time</h3>
+              <ul class="duty-list">
+                <li><span class="duty-list__pct">~35%</span> Prospect &amp; qualify faculty and departments</li>
+                <li><span class="duty-list__pct">~25%</span> Book and run demos (~8 / month)</li>
+                <li><span class="duty-list__pct">~20%</span> Close contracts</li>
+                <li><span class="duty-list__pct">~10%</span> First-semester client check-ins</li>
+                <li><span class="duty-list__pct">~5%</span> CRM &amp; quota hygiene</li>
+                <li><span class="duty-list__pct">~5%</span> Weekly founder coaching</li>
+              </ul>
+            </div>
+            <div class="role-block">
+              <h3 class="role-block__title">What success looks like</h3>
+              <ul class="metric-list">
+                <li><strong>24+</strong> demos booked per quarter</li>
+                <li><strong>5+</strong> new accounts closed per quarter</li>
+                <li><strong>~25%</strong> demo-to-close conversion target</li>
+                <li><strong>4.5</strong> client satisfaction goal</li>
+              </ul>
+              <h3 class="role-block__title role-block__title--spaced">Basics</h3>
+              <ul class="plain-list">
+                <li>Full-time · Sales &amp; Growth</li>
+                <li>Reports to Founder/CEO (Kaden)</li>
+                <li>0–2 years client-facing preferred</li>
+                <li>Bachelor’s preferred, not required</li>
+                <li>Target start ~May for August academic ramp</li>
+                <li>Pay: base <strong>$50–60K</strong> + commission</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Realistic job preview -->
+      <section id="reality" class="section section--rjp">
+        <div class="section__inner">
+          <p class="eyebrow">Realistic job preview</p>
+          <h2 class="section__title">Let’s be real about it</h2>
+          <p class="section__lede section__lede--wide">
+            This role involves a lot of outreach, plenty of “no”s, and pay that’s partly commission.
+            You’ll need to relocate to Lehi—on-site, no relocation assistance. We say this up front so you can
+            decide if the mentorship and mission are worth the grind.
+          </p>
+          <ul class="rjp-points">
+            <li>
+              <h3>Cold outreach is the job</h3>
+              <p>Most days start with prospecting faculty who haven’t asked to hear from you yet.</p>
+            </li>
+            <li>
+              <h3>Rejection is normal</h3>
+              <p>“No” is data, not a personal verdict. Coachability under rejection matters here.</p>
+            </li>
+            <li>
+              <h3>Commission is part of pay</h3>
+              <p>Base is $50–60K. The rest depends on pipeline you build and deals you help close.</p>
+            </li>
+            <li>
+              <h3>Lehi, on-site</h3>
+              <p>This is an in-office role in Lehi, UT. Relocation is required; we do not offer relocation assistance.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Hiring process -->
+      <section id="process" class="section section--process">
+        <div class="section__inner">
+          <p class="eyebrow">Hiring process</p>
+          <h2 class="section__title">What to expect when you apply</h2>
+          <p class="section__lede">
+            A seven-step path designed to find coachable sellers who can demo with clarity.
+            Plan on roughly 10–11 weeks from posting to offer (e.g., February post → May start → summer ramp → August push).
+          </p>
+          <ol class="steps">
+            <li class="step"><span class="step__n">1</span><div><h3>Resume screen</h3><p>We look for signal of grit, communication, and interest in education or sales.</p></div></li>
+            <li class="step"><span class="step__n">2</span><div><h3>15-min phone screen</h3><p>A short conversation on fit, relocation readiness, and motivation.</p></div></li>
+            <li class="step"><span class="step__n">3</span><div><h3>Written cold-email exercise</h3><p>Show how you’d open a door with a professor who doesn’t know Prova yet.</p></div></li>
+            <li class="step"><span class="step__n">4</span><div><h3>Mock product demo + coaching</h3><p>Run a demo, then take feedback live. (Can be same-day / video for out-of-state.)</p></div></li>
+            <li class="step"><span class="step__n">5</span><div><h3>Structured interview</h3><p>Deeper conversation on judgment, ownership, and how you learn. Score ≥3/5 to advance.</p></div></li>
+            <li class="step"><span class="step__n">6</span><div><h3>References + background check</h3><p>We confirm the story with people who’ve seen you work.</p></div></li>
+            <li class="step"><span class="step__n">7</span><div><h3>Offer</h3><p>If it’s a mutual fit, we make it official and plan your May start / summer ramp.</p></div></li>
+          </ol>
+          <p class="process-note">
+            Final evaluation weights: mock demo 35% · structured interview 30% · written exercise 20% · references 15%.
+            Ties favor coachability and improvement across rounds.
+          </p>
+        </div>
+      </section>
+
+      <!-- Apply -->
+      <section id="apply" class="section section--apply">
+        <div class="section__inner section__inner--narrow">
+          <p class="eyebrow">Next step</p>
+          <h2 class="section__title">Ready to apply?</h2>
+          <p class="section__lede">
+            The official apply destination is coming soon. Until then, this button is a placeholder—
+            use it to mark interest while we finalize the email / Handshake path with Kaden.
+          </p>
+          <button type="button" class="btn btn--primary btn--lg" id="apply-btn" aria-describedby="apply-soon">
+            Apply
+          </button>
+          <p id="apply-soon" class="apply-soon" hidden>Coming soon — application email TBA.</p>
+          <p class="eeo">
+            Prova is an equal opportunity employer. We welcome applicants of all backgrounds and do not discriminate
+            on the basis of race, color, religion, sex, national origin, age, disability, veteran status, or any other
+            protected characteristic.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo brand__logo--footer" src="prova-logo.png?v=5" alt="Prova" />
+          <span class="brand__host">milestone3.hrm</span>
+        </div>
+        <p class="footer__links">
+          <a href="https://prova.education" target="_blank" rel="noopener noreferrer">prova.education</a>
+          <span aria-hidden="true">·</span>
+          <span>Lehi, UT</span>
+          <span aria-hidden="true">·</span>
+          <span>Edtech</span>
+        </p>
+        <p class="footer__note">milestone3.hrm · Careers site for client review</p>
+        <p class="footer__note footer__note--small">Official Prova logo in use · Apply destination still provisional (Coming soon / Email TBA).</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="gate.js"></script>
+</body>
+</html>
