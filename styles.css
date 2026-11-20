@@ -791,6 +791,88 @@ input {
   font-size: 0.98rem;
 }
 
+.rjp-reframe {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.rjp-reframe__label {
+  margin: 0 0 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9db4ff;
+}
+
+.rjp-reframe__title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.45rem, 3vw, 1.95rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.rjp-reframe__lede {
+  margin: 0 0 2rem;
+  max-width: 46rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+}
+
+.rjp-counters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.rjp-counters li {
+  padding: 1.35rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.rjp-counters li:last-child {
+  padding-bottom: 0;
+}
+
+.rjp-counters__barrier {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9db4ff;
+}
+
+.rjp-counters h4 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.rjp-counters p {
+  margin: 0;
+  max-width: 46rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.98rem;
+}
+
+@media (min-width: 800px) {
+  .rjp-counters {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2.5rem;
+  }
+
+  .rjp-counters li:nth-child(2) {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+}
+
 /* —— Process steps —— */
 .steps {
   list-style: none;
